@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Writing Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Top Bar -->
+  <header class="bg-blue-700 text-white p-4 sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <h1 class="text-2xl font-bold">Prompt Writing Guide</h1>
+      <div class="flex items-center space-x-2">
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Search pages..." 
+          class="px-4 py-2 w-72 rounded-md text-gray-700 focus:outline-none"
+        >
+        <button 
+          onclick="performSearch()" 
+          class="px-4 py-2 bg-blue-600 hover:bg-blue-800 text-white rounded-md">
+          Search
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="flex h-screen">
+    <!-- Left Navigation -->
+    <aside class="bg-gray-800 text-white w-1/4 p-4 overflow-auto">
+      <nav>
+        <h2 class="text-lg font-semibold mb-4">Navigation</h2>
+        <ul id="navLinks" class="space-y-2">
+          <!-- Dynamically populated links -->
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Center Section -->
+    <main class="flex-1 p-6 bg-white overflow-auto">
+      <!-- Guide Section -->
+      <section id="guideSection" class="mb-6">
+        <h2 class="text-2xl font-bold mb-4">How to Write Effective Prompts</h2>
+        <p>
+          Writing prompts effectively is key to getting accurate and actionable responses from AI systems like ChatGPT or Anthropic. Here are some tips:
+        </p>
+        <ul class="list-disc ml-6 mt-4">
+          <li>Be specific and concise about your requirements.</li>
+          <li>Provide examples or structured templates for clarity.</li>
+          <li>Ask for outputs in a desired format, such as JSON, lists, or paragraphs.</li>
+          <li>Iterate on your prompt based on the responses you get.</li>
+        </ul>
+      </section>
+
+      <hr class="my-6">
+
+      <!-- Output Section -->
+      <section id="outputSection">
+        <h2 class="text-2xl font-bold mb-4">AI Output</h2>
+        <div id="output" class="bg-gray-100 p-4 rounded-md shadow-md">
+          <!-- Placeholder for AI response -->
+          <p class="text-gray-700">No output generated yet. Connect to ChatGPT/Anthropic API for live responses.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Right Quick Links -->
+    <aside class="bg-gray-50 w-1/4 p-4 border-l border-gray-200 overflow-auto">
+      <h2 class="text-lg font-semibold mb-4">Quick Links</h2>
+      <ul id="quickLinks" class="space-y-2">
+        <!-- Dynamically populated links -->
+      </ul>
+    </aside>
+  </div>
+
+  <!-- JavaScript for Dynamic Behavior -->
+  <script>
+    // Mock Data for Pages
+    const pages = [
+      { id: 1, title: "Introduction", url: "#guideSection" },
+      { id: 2, title: "Writing Prompts", url: "#guideSection" },
+      { id: 3, title: "AI Output", url: "#outputSection" },
+      { id: 4, title: "FAQ", url: "#" },
+      { id: 5, title: "Advanced Techniques", url: "#" }
+    ];
+
+    // Populate Navigation and Quick Links
+    function populateLinks() {
+      const navLinks = document.getElementById('navLinks');
+      const quickLinks = document.getElementById('quickLinks');
+
+      pages.forEach(page => {
+        // Navigation Links
+        const navItem = document.createElement('li');
+        navItem.innerHTML = `<a href="${page.url}" class="block px-3 py-2 rounded-md hover:bg-blue-500">${page.title}</a>`;
+        navLinks.appendChild(navItem);
+
+        // Quick Links
+        const quickItem = document.createElement('li');
+        quickItem.innerHTML = `<a href="${page.url}" class="text-blue-600 hover:underline">${page.title}</a>`;
+        quickLinks.appendChild(quickItem);
+      });
+    }
+
+    // Search Functionality
+    function performSearch() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const navLinks = document.getElementById('navLinks');
+      navLinks.innerHTML = ''; // Clear existing links
+
+      const filteredPages = pages.filter(page =>
+        page.title.toLowerCase().includes(query)
+      );
+
+      filteredPages.forEach(page => {
+        const navItem = document.createElement('li');
+        navItem.innerHTML = `<a href="${page.url}" class="block px-3 py-2 rounded-md hover:bg-blue-500">${page.title}</a>`;
+        navLinks.appendChild(navItem);
+      });
+    }
+
+    // Initialize App
+    populateLinks();
+  </script>
+</body>
+</html>
