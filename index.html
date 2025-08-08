@@ -1,142 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prince Shah - Lead Software Engineer</title>
-    <meta name="description" content="Lead Software Engineer with 15+ years in distributed systems and cloud infrastructure">
-    <style>
-        :root {
-            --primary: #1e40af;
-            --secondary: #3b82f6;
-            --dark: #1e293b;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box }
-        body { 
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background: #f0f4f8;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        .container { max-width: 1000px; margin: 0 auto; }
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--primary); }
-        h2 { font-size: 1.8rem; margin: 1.5rem 0 0.75rem; border-bottom: 2px solid var(--secondary); padding-bottom: 0.5rem; }
-        h3 { font-size: 1.4rem; margin: 1.2rem 0 0.5rem; color: var(--primary); }
-        p { margin: 0.75rem 0; }
-        .contact { 
-            display: flex; 
-            flex-wrap: wrap; 
-            gap: 1rem; 
-            margin: 1rem 0; 
-            color: #4b5563;
-        }
-        .section { margin-bottom: 2.5rem; }
-        .skills-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-            gap: 0.75rem;
-        }
-        .skill { 
-            background: #e0f2fe; 
-            color: var(--primary); 
-            padding: 0.5rem 0.75rem; 
-            border-radius: 20px; 
-            font-size: 0.9rem;
-            display: flex;
-            justify-content: space-between;
-        }
-        .skill-expert { background: #dcfce7; color: #166534; }
-        .skill-skillful { background: #fef3c7; color: #854d0e; }
-        .experience-item { margin-bottom: 1.5rem; }
-        .job-title { font-weight: 600; color: var(--primary); }
-        .company { font-style: italic; color: #4b5563; }
-        .date { color: #64748b; font-size: 0.9rem; margin-bottom: 0.5rem; }
-        .highlight { background: #fff9db; padding: 0.5rem; border-radius: 4px; margin: 0.75rem 0; }
-        footer { 
-            text-align: center; 
-            margin-top: 3rem; 
-            color: #64748b; 
-            font-size: 0.9rem;
-        }
-        @media (max-width: 768px) {
-            body { padding: 1rem; }
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.5rem; }
-        }
-    </style>
+<meta charset="utf-8">
+<title>Prince Shah – Lead Software Engineer</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description"
+      content="Lead Software Engineer with 15+ years in distributed systems and cloud infrastructure">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet">
+
+<style>
+/* 1.  Critical CSS – minified  */
+:root{--primary:#1e40af;--secondary:#3b82f6;--dark:#1e293b;--light:#f0f4f8}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+     line-height:1.6;color:var(--dark);background:var(--light);font-size:1rem;
+     max-width:1200px;margin:0 auto;padding:2rem}
+header{margin-bottom:2rem}
+h1{font-size:2.5rem;color:var(--primary);margin-bottom:.5rem}
+h2{font-size:1.8rem;color:var(--primary);margin:1.5rem 0 .75rem;
+   border-bottom:2px solid var(--secondary);padding-bottom:.5rem}
+h3{font-size:1.4rem;color:var(--primary);margin:1.2rem 0 .5rem}
+p{margin:.75rem 0}
+.job-title{font-weight:600;color:var(--primary)}
+.company{font-style:italic;color:#4b5563}
+.date{color:#64748b;font-size:.9rem;margin-bottom:.5rem}
+section{margin-bottom:2.5rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+        gap:.75rem}
+.skill{background:#e0f2fe;color:var(--primary);padding:.5rem .75rem;
+       border-radius:20px;font-size:.9rem;display:flex;
+       justify-content:space-between}
+.skill.expert{background:#dcfce7;color:#166534}
+.skill.skillful{background:#fef3c7;color:#854d0e}
+.experience-item{margin-bottom:1.5rem}
+.highlight{background:#fff9db;padding:.5rem;border-radius:4px;margin:.75rem 0}
+footer{text-align:center;margin-top:3rem;color:#64748b;font-size:.9rem}
+footer a{color:var(--primary);text-decoration:none}
+footer a:hover{text-decoration:underline}
+@media(max-width:768px){
+  body{padding:1rem}
+  h1{font-size:2rem}
+  h2{font-size:1.5rem}
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>Prince Shah</h1>
-            <p class="job-title">Lead Software Engineer</p>
-            <div class="contact">
-                <span>4603 WESTWOOD, DUBLIN, US, 94568</span>
-                <span>SHAHPRINCEA@GMAIL.COM</span>
-                <span>510-512-2064</span>
-            </div>
-        </header>
+<main class="container">
+<header>
+  <h1>Prince Shah</h1>
+  <p class="job-title">Lead Software Engineer</p>
+  <div class="contact" style="display:flex;gap:1rem;margin:1rem 0;color:#4b5563">
+    <span>4603 Westwood, Dublin, US 94568</span>
+    <span>shahprincea@gmail.com</span>
+    <span>510‑512‑2064</span>
+  </div>
+</header>
 
-        <section class="section">
-            <h2>Professional Summary</h2>
-            <p>Lead Software Engineer with over 15 years of expertise in distributed systems and cloud infrastructure. Proven ability to design scalable solutions for Fortune 500 clients. Passionate about modern development practices and team leadership.</p>
-        </section>
+<section>
+  <h2>Professional Summary</h2>
+  <p>Lead Software Engineer with over 15 years of expertise in distributed systems
+    and cloud infrastructure. Proven ability to design scalable solutions for
+    Fortune 500 clients. Passionate about modern development practices and
+    team leadership.</p>
+</section>
 
-        <section class="section">
-            <h2>Experience</h2>
-            
-            <div class="experience-item">
-                <div class="date">2018 - Present</div>
-                <h3 class="job-title">Lead Software Engineer</h3>
-                <div class="company">Tech Innovations Inc.</div>
-                <ul class="mt-2">
-                    <li class="highlight">Architected cloud-native microservices reducing latency by 40% for 5M+ users</li>
-                    <li class="highlight">Mentored 12 engineers in modern DevOps practices and CI/CD pipelines</li>
-                    <li class="highlight">Led migration of legacy systems to AWS, saving $2M annually</li>
-                </ul>
-            </div>
-            
-            <div class="experience-item">
-                <div class="date">2012 - 2018</div>
-                <h3 class="job-title">Senior Software Engineer</h3>
-                <div class="company">Global Solutions Corp</div>
-                <ul class="mt-2">
-                    <li class="highlight">Developed distributed systems handling 10K+ TPS with 99.99% uptime</li>
-                    <li class="highlight">Optimized database queries reducing response time by 65%</li>
-                    <li class="highlight">Implemented automated testing suite covering 85% of codebase</li>
-                </ul>
-            </div>
-        </section>
+<section>
+  <h2>Experience</h2>
 
-        <section class="section">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill skill-expert">Java (Expert)</div>
-                <div class="skill skill-expert">Python (Expert)</div>
-                <div class="skill skill-expert">Kubernetes (Expert)</div>
-                <div class="skill skill-expert">AWS (Expert)</div>
-                <div class="skill skill-skillful">Docker (Skillful)</div>
-                <div class="skill skill-skillful">Golang (Skillful)</div>
-                <div class="skill skill-skillful">React (Skillful)</div>
-                <div class="skill skill-skillful">Microservices (Skillful)</div>
-                <div class="skill skill-expert">Distributed Systems (Expert)</div>
-                <div class="skill skill-expert">Cloud Architecture (Expert)</div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Education</h2>
-            <h3 class="job-title">Master of Computer Science</h3>
-            <div class="company">Stanford University</div>
-            <div class="date">2010 - 2012</div>
-        </section>
-
-        <footer>
-            <p>Resume hosted on GitHub Pages • <a href="https://github.com/prince-shah/resume" class="text-blue-600 hover:underline">View source</a></p>
-        </footer>
-    </div>
-</body>
-</html>
+  <div class="experience-item">
+    <div class="date">2018 – Present</div>
+    <h3 class="job-title">Lead Software Engineer</h3>
+    <div class="company">Tech Innovations Inc.</div>
+    <ul>
+      <li class
